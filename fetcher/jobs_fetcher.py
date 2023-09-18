@@ -9,7 +9,8 @@ from utils.helpers import list_flatter, save_json, read_json
 firms = [
 
     {"symbol": "coinmetrics", "name": "CoinMetrics", "jobs": "https://coinmetrics.io/careers/#open-positions",
-     "source": "native"},
+     "source": "native",
+     "image": ""},
 
     {"symbol": "santiment", "name": "Santiment",
      "jobs": "https://santiment.notion.site/Work-with-Santiment-f1880de7557b468a80b1465013f311cd", "source": "notion"},
@@ -35,32 +36,49 @@ firms = [
     ###############################################################################################################################################
     ###############################################################################################################################################
     {"symbol": "tokenmetrics", "name": "TokenMetrics", "jobs": "https://jobs.lever.co/tokenmetrics?&",
-     "source": "jobs_lever"},
-    {"symbol": "polygon", "name": "Polygon", "jobs": "https://jobs.lever.co/Polygon", "source": "jobs_lever"},
-    {"symbol": "kraken", "name": "Kraken", "jobs": "https://jobs.lever.co/kraken", "source": "jobs_lever"},
-    {"symbol": "atomic", "name": "Atomic", "jobs": "https://jobs.lever.co/atomic", "source": "jobs_lever"},
+     "source": "jobs_lever",
+     "logo": "https://global-uploads.webflow.com/634054bf0f60201ce9b30604/634503713190a76b2bdd040b_TM%20Logo.svg"},
+    {"symbol": "polygon", "name": "Polygon", "jobs": "https://jobs.lever.co/Polygon", "source": "jobs_lever",
+     "logo": "https://assets-global.website-files.com/6364e65656ab107e465325d2/637adca2e1a09547acd85968_Y_44LwHNRnOEvnRExgnO1UujtZwn7zq7BCb4oxxHgpI.jpeg"},
+    {"symbol": "kraken", "name": "Kraken", "jobs": "https://jobs.lever.co/kraken", "source": "jobs_lever",
+     "logo": "https://assets-global.website-files.com/6364e65656ab107e465325d2/637aee1ef72214496f12a341__60qR_QlkLmCec1XXmNJptaSGIgNjEKqh2NIFTp3-AI.png"},
+    {"symbol": "atomic", "name": "Atomic", "jobs": "https://jobs.lever.co/atomic", "source": "jobs_lever",
+     "logo": ""},
     {"symbol": "offchainlabs", "name": "OffChain Labs", "jobs": "https://jobs.lever.co/offchainlabs",
-     "source": "jobs_lever"},
+     "source": "jobs_lever",
+     "logo": "https://offchainlabs.com/wp-content/themes/offchain/images/home/hero/navi_logoo.svg"},
 
 
     {"symbol": "utopia_labs", "name": "Utopia Labs", "jobs": "https://boards.greenhouse.io/utopialabs",
-     "source": "greenhouse"},
-    {"symbol": "messari", "name": "Messari", "jobs": "https://boards.greenhouse.io/messari", "source": "greenhouse"},
-    {"symbol": "nansen", "name": "Nansen", "jobs": "https://boards.greenhouse.io/nansen", "source": "greenhouse"},
-    {"symbol": "ox", "name": "0x", "jobs": "https://boards.greenhouse.io/0x", "source": "greenhouse"},
+     "source": "greenhouse",
+     "logo": "https://global-uploads.webflow.com/63d9506ce2c2a2c301338d9b/63d950a50c18d87b498d6947_Utopia%20Labs%20Logo.svg"},
+    {"symbol": "messari", "name": "Messari", "jobs": "https://boards.greenhouse.io/messari", "source": "greenhouse",
+     "logo": "https://images.crunchbase.com/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/yltdya90noo6ptm2ohks"},
+    {"symbol": "nansen", "name": "Nansen", "jobs": "https://boards.greenhouse.io/nansen", "source": "greenhouse",
+     "logo": "https://assets-global.website-files.com/60118ca18674407b85935203/64f6f41dcae1161d9e6a7b43_White.svg"},
+    {"symbol": "ox", "name": "0x", "jobs": "https://boards.greenhouse.io/0x", "source": "greenhouse",
+     "logo": "https://assets.website-files.com/640bf70a17d12b42d97a052b/640bfd7d8441821c4cd20210_logo.svg"},
     {"symbol": "magiceden", "name": "MagicEden", "jobs": "https://boards.greenhouse.io/magiceden",
-     "source": "greenhouse"},
+     "source": "greenhouse",
+     "logo": "https://pbs.twimg.com/card_img/1701691186321469440/jzjaPs2J?format=jpg&name=medium"},
     {"symbol": "edgeandnode", "name": "Edge & Node", "jobs": "https://boards.greenhouse.io/edgeandnode",
-     "source": "greenhouse"},
+     "source": "greenhouse",
+     "logo": "https://edgeandnode.com/images/logo-big.png"},
     {"symbol": "uniswaplabs", "name": "Uniswap", "jobs": "https://boards.greenhouse.io/uniswaplabs",
-     "source": "greenhouse"},
+     "source": "greenhouse",
+     "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFOIW5iK418FeYIZZf4aTxP8lWg_AzyZbrU0aviNaYhg&s"},
     {"symbol": "layerzerolabs", "name": "LayerZero Labs", "jobs": "https://boards.greenhouse.io/layerzerolabs",
-     "source": "greenhouse"},
-    {"symbol": "alchemy", "name": "Alchemy", "jobs": "https://boards.greenhouse.io/alchemy", "source": "greenhouse"},
-    {"symbol": "okx", "name": "OKX", "jobs": "https://boards.greenhouse.io/okx", "source": "greenhouse"},
+     "source": "greenhouse",
+     "logo": "https://cdn-images-1.medium.com/v2/resize:fit:1200/format:png/1*Iz7ZjBiBzQXhqWF8o1X9vw.png"},
+    {"symbol": "alchemy", "name": "Alchemy", "jobs": "https://boards.greenhouse.io/alchemy", "source": "greenhouse",
+     "logo": "https://www.solodev.com/file/b2360ebd-dd29-11ec-b9ad-0eaef3759f5f/Alchemy-Logo-Icon.png"},
+    {"symbol": "okx", "name": "OKX", "jobs": "https://boards.greenhouse.io/okx", "source": "greenhouse",
+     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Logo-OKX.png/800px-Logo-OKX.png"},
 
-    {"symbol": "zero_hash", "name": "Zero Hash", "jobs": "https://zero-hash.breezy.hr/", "source": "breezy"},
-    {"symbol": "bitwave", "name": "Bitwave", "jobs": "https://bitwave.breezy.hr/", "source": "breezy"},
+    {"symbol": "zero_hash", "name": "Zero Hash", "jobs": "https://zero-hash.breezy.hr/", "source": "breezy",
+     "logo": "https://cdn-images-1.medium.com/max/1200/1*yhA5ylNNLZAGxGZ3rT3WwA.jpeg"},
+    {"symbol": "bitwave", "name": "Bitwave", "jobs": "https://bitwave.breezy.hr/", "source": "breezy",
+     "logo": "https://images.crunchbase.com/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/beyw4cr4ul2fcdey1kdk"},
     # {"symbol": "", "name": "", "jobs": ""},
 ]
 
@@ -189,6 +207,7 @@ class Fetcher(object):
                     for j in jobz:
                         j['company'] = f['name']
                         j['company_symbol'] = f['symbol']
+                        j['company_logo'] = f['logo']
                     all_jobz.append(jobz)
                 else:
                     print(f"ERROR {resp.status_code}, for {f['name']}")
@@ -199,11 +218,11 @@ class Fetcher(object):
         return all_jobz
 
 
-# ft = Fetcher()
-# all_jobz = ft.fetcher(firms)
-# save_json(all_jobz, "all_jobz", local=True)
+ft = Fetcher()
+all_jobz = ft.fetcher(firms)
+save_json(all_jobz, "all_jobz", local=True)
 all_jobz =  read_json("all_jobz", local=True)
 print("len(all_jobz): ",len(all_jobz))
 for j in all_jobz:
     pprint(j)
-    print("******************************************************************************************************************************")
+    print("**************************************************************************************************************************")
