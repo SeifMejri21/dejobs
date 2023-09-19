@@ -15,4 +15,5 @@ server = app.server
 app.layout = front_page_layout
 
 if __name__ == "__main__":
-    app.run_server(debug=True, port=5000)
+    # app.run_server(debug=True, port=5000)
+    app.run_server()
