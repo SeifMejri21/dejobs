@@ -118,7 +118,7 @@ def job_card4_dynamic(job_title, company_logo, company_name, location, job_url):
     return card
 
 
-all_jobz = read_json("all_jobz", local=True)
+all_jobz = read_json("all_jobz")
 
 all_jobs_cards = [job_card4_dynamic(job_title=c['title'], company_name=c['company'], company_logo=c['company_logo'],
                                     location=c['location'], job_url=c['url']) for c in all_jobz]
@@ -152,8 +152,10 @@ socials = dmc.Affix(
     position={"top": 20, "right": 10},
 )
 
+version = html.H6("V0.0 - static")
 
-font_page_layout = html.Div([
+
+front_page_layout = html.Div([
     html.Div(html.A(
         # html.Img(
         #         # src="dashboard/assets/logo - Copy.jpg",
@@ -178,16 +180,16 @@ font_page_layout = html.Div([
                      # dcc.Input(id="job_title", type="text", placeholder="Junior Data Engineer",
                      #             style={'marginRight': '1px'})
                      dcc.Dropdown(options=all_titles, value=all_titles[:1],
-                         multi=True
-                     )
+                                  multi=True
+                                  )
                      ]),
             dbc.Col([html.H6("Company"),
                      dcc.Dropdown(options=all_companies, value=all_companies[:1],
-                         multi=True)]),
+                                  multi=True)]),
             dbc.Col([html.H6("Location"),
                      dcc.Dropdown(options=all_locations, value=all_locations[:1],
-                         multi=True
-                     )]),
+                                  multi=True
+                                  )]),
             # dbc.Col(dcc.Checklist(
             #     [{"label": html.Div(['Remote'], style={'color': 'MediumTurqoise', 'font-size': 20}),
             #       "value": "Remote", }, ], value=['Remote'],
@@ -201,30 +203,32 @@ font_page_layout = html.Div([
         all_jobs_cards,
         style={"margin-left": "55px", "margin-right": "55px", "margin-top": "55px", "margin-bottom": "55px",
                "align": "center", 'display': 'inline-block', 'width': '99%', }),
-    socials
+    socials,
+    version,
 ], style={"margin-left": "25px", "margin-right": "25px", "margin-top": "25px", "margin-bottom": "25px",
           "align": "center"})
-app = dash.Dash(__name__,
-                external_stylesheets=[dbc.themes.BOOTSTRAP],
-                suppress_callback_exceptions=True,
-                title="DeJobs.",
-                update_title="DeJobs. | Loading...",
-                assets_folder="assets",
-                include_assets_files=True,
-                )
-server = app.server
-app.layout = font_page_layout
 
-# @app.callback(
-#     # Output(component_id='data_table1', component_property='data'),
-#     # Output(component_id='data_table2', component_property='data'),
-#     # Output(component_id='index1', component_property='figure'),
-#     # Output(component_id='index2', component_property='figure'),
-#     # Output(component_id='index3', component_property='figure'),
-#     # Output(component_id='markets_bd', component_property='figure'),
-#     # Output(component_id='launch_table', component_property='data'),
-#     # Input(component_id='collection_name', component_property='value'),
-# )
-
-if __name__ == "__main__":
-    app.run_server(debug=True, port=5000)
+# app = dash.Dash(__name__,
+#                 external_stylesheets=[dbc.themes.BOOTSTRAP],
+#                 suppress_callback_exceptions=True,
+#                 title="DeJobs.",
+#                 update_title="DeJobs. | Loading...",
+#                 assets_folder="assets",
+#                 include_assets_files=True,
+#                 )
+# server = app.server
+# app.layout = front_page_layout
+#
+# # @app.callback(
+# #     # Output(component_id='data_table1', component_property='data'),
+# #     # Output(component_id='data_table2', component_property='data'),
+# #     # Output(component_id='index1', component_property='figure'),
+# #     # Output(component_id='index2', component_property='figure'),
+# #     # Output(component_id='index3', component_property='figure'),
+# #     # Output(component_id='markets_bd', component_property='figure'),
+# #     # Output(component_id='launch_table', component_property='data'),
+# #     # Input(component_id='collection_name', component_property='value'),
+# # )
+#
+# if __name__ == "__main__":
+#     app.run_server(debug=True, port=5000)
