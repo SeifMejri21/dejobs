@@ -9,3 +9,4 @@ pillow~=9.3.0
 dash_bootstrap_components~=0.12.1
 dash_mantine_components~=0.12.1
 dash_iconify~=0.1.2
+gunicorn==19.7.1
