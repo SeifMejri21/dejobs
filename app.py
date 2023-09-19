@@ -13,7 +13,7 @@ app = dash.Dash(__name__,
                 assets_folder="assets",
                 include_assets_files=True,
                 )
-app._favicon = "dj2.png"
+app._favicon = "dejobs_icon.png"
 server = app.server
 app.layout = front_page_layout
 
