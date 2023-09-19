@@ -1,6 +1,6 @@
 import dash_bootstrap_components as dbc
 import dash_mantine_components as dmc
-from dash import html, dash, dcc
+from dash import html, dcc
 from dash_iconify import DashIconify
 
 from utils.helpers import read_json
@@ -153,7 +153,6 @@ socials = dmc.Affix(
 )
 
 version = html.H6("V0.0 - static")
-
 
 front_page_layout = html.Div([
     html.Div(html.A(
