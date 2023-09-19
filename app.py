@@ -1,7 +1,7 @@
 from dash import dash
 import dash_bootstrap_components as dbc
 
-from dashboard.basic_layout import front_page_layout
+from dashboard.app import front_page_layout
 
 app = dash.Dash(__name__,
                 external_stylesheets=[dbc.themes.BOOTSTRAP],
